@@ -4,6 +4,7 @@ import com.zqk.community.dto.GithubUser;
 import com.zqk.community.mapper.UserMapper;
 import com.zqk.community.provider.GithubProvider;
 import com.zqk.community.model.User;
+import com.zqk.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -20,8 +21,8 @@ public class AuthorizeController {
 
     @Autowired
     private GithubProvider githubProvider;
-    @Autowired(required=false)
-    private UserMapper userMapper;
+    @Autowired
+    private UserService userService;
 
     @Value("${github.client.id}")
     private String clientId;
@@ -55,18 +56,24 @@ public class AuthorizeController {
             user.setToken(token);
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));
-            user.setGmtCreate(System.currentTimeMillis());
-            user.setGmtModified(user.getGmtCreate());
             user.setAvatarUrl(githubUser.getAvatar_url());
-            userMapper.insert(user);
+            userService.createOrUpdate(user);
             response.addCookie(new Cookie("token",token));
             //cookie和session
-            request.getSession().setAttribute("user",user);
             return "redirect:/";
             //登录成功
         }else{
             //登录失败
             return "redirect:/";
         }
+    }
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response){
+        request.getSession().removeAttribute("user");
+        Cookie cookie = new Cookie("token",null);
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+        return "redirect:/";
     }
 }
