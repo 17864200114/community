@@ -1,7 +1,9 @@
 package com.zqk.community.controller;
 
 import com.zqk.community.dto.PaginationDTO;
+import com.zqk.community.model.Notification;
 import com.zqk.community.model.User;
+import com.zqk.community.service.NotificationService;
 import com.zqk.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,12 +18,15 @@ import javax.servlet.http.HttpServletRequest;
 public class ProfileController {
     @Autowired
     private QuestionService questionService;
+
+    @Autowired
+    private NotificationService notificationService;
     @GetMapping("/profile/{action}")
     public String profile(HttpServletRequest request,
                           @PathVariable(name = "action") String action,
                           Model model,
                           @RequestParam(name = "page",defaultValue = "1")Integer page,
-                          @RequestParam(name = "size",defaultValue = "2")Integer size){
+                          @RequestParam(name = "size",defaultValue = "5")Integer size){
 
         User user = (User) request.getSession().getAttribute("user");
         if(user==null){
@@ -30,12 +35,14 @@ public class ProfileController {
         if("questions".equals(action)){
             model.addAttribute("section","questions");
             model.addAttribute("sectionName","我的提问");
+            PaginationDTO paginationDTO = questionService.list(user.getId(),page,size);
+            model.addAttribute("pagination", paginationDTO);
         }else if("replies".equals(action)){
+            PaginationDTO paginationDTO = notificationService.list(user.getId(),page,size);
+            model.addAttribute("pagination",paginationDTO);
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","最新回复");
         }
-        PaginationDTO paginationDTO = questionService.list(user.getId(),page,size);
-        model.addAttribute("pagination", paginationDTO);
         return "profile";
     }
 }
