@@ -91,5 +91,16 @@ body {
     font-size: 15px;
 }
 
-/*.hover-color{*/
-/*}*/
+.person{
+    width: 400px;
+    margin: 0 auto;
+    height: 50px;
+}
+.person input{
+    width: 60%;
+}
+.person-span{
+    font-size: 21px;
+}
+
+

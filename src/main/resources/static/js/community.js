@@ -111,6 +111,18 @@ function collapseComments(e) {
     }
 }
 
+function likeComment(e) {
+    var id = e.getAttribute("data-id");
+}
+
+
+
+function infoEdit() {
+    document.getElementById("bio").readOnly=false;
+    document.getElementById("password").readOnly=false;
+    document.getElementById("avatarUrl").readOnly=false;
+}
+
 // $(function(){
 //     console.log("已执行");
 //     $(".hover-color").hover(

@@ -5,12 +5,8 @@ import com.zqk.community.dto.QuestionDTO;
 import com.zqk.community.dto.QuestionQueryDTO;
 import com.zqk.community.exception.CustomizeErrorCode;
 import com.zqk.community.exception.CustomizeException;
-import com.zqk.community.mapper.QuestionExtMapper;
-import com.zqk.community.mapper.QuestionMapper;
-import com.zqk.community.mapper.UserMapper;
-import com.zqk.community.model.Question;
-import com.zqk.community.model.QuestionExample;
-import com.zqk.community.model.User;
+import com.zqk.community.mapper.*;
+import com.zqk.community.model.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
@@ -32,6 +28,11 @@ public class QuestionService {
     private UserMapper userMapper;
     @Autowired
     private QuestionExtMapper questionExtMapper;
+    @Autowired
+    private CommentExtMapper commentExtMapper;
+    @Autowired
+    private CommentMapper commentMapper;
+
     public PaginationDTO list(String search, Integer page, Integer size) {
 
 
@@ -182,5 +183,23 @@ public class QuestionService {
             return questionDTO;
         }).collect(Collectors.toList());
         return questionDTOs;
+    }
+
+    public void delete(Long id) {
+        //先删除二级评论再删除一级评论
+
+        //获取一级评论的id
+        List<Long> commentIds =  commentExtMapper.selectComment(id);
+        for(Long commentId:commentIds){
+            //根据一级评论的id删除二级评论，因为二级评论的parent__id是一级评论的id
+            CommentExample commentExample1 = new CommentExample();
+            commentExample1.createCriteria().andParentIdEqualTo(commentId).andTypeEqualTo(2);
+            commentMapper.deleteByExample(commentExample1);
+            //删除一级评论
+            CommentExample commentExample2 = new CommentExample();
+            commentExample2.createCriteria().andParentIdEqualTo(id).andTypeEqualTo(1);
+            commentMapper.deleteByExample(commentExample2);
+        }
+        questionMapper.deleteByPrimaryKey(id);
     }
 }

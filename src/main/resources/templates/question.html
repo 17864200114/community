@@ -74,12 +74,19 @@
                                 </h4>
                                 <div th:text="${comment.content}"></div>
                                 <div class="menu">
-                                    <span class="glyphicon glyphicon-thumbs-up icon"></span>
+<!--                                    点赞-->
+                                    <span th:data-id="${comment.id}"
+                                          onclick="likeComment(this)">
+                                        <span class="glyphicon glyphicon-thumbs-up icon"></span>
+                                        <span th:text="${comment.likeCount}" style="font-size: 16px"></span>
+                                    </span>
+<!--                                    评论-->
                                     <span th:data-id="${comment.id}"
                                           onclick="collapseComments(this)">
                                         <span class="glyphicon glyphicon-comment icon"></span>
                                         <span th:text="${comment.commentCount}" style="font-size: 16px"></span>
                                     </span>
+
                                     <span class="pull-right"
                                           th:text="${#dates.format(question.gmtCreate, 'yyyy-MM-dd HH:mm')}"></span>
                                 </div>

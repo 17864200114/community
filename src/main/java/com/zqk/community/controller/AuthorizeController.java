@@ -52,13 +52,18 @@ public class AuthorizeController {
         if(githubUser!=null && githubUser.getId() != null)
         {
             User user = new User();
+            //token全局唯一标识符,是指在一台机器上生成的数字，它保证对在同一时空中的所有机器都是唯一的
+            // ，是由一个十六位的数字组成,表现出来的 形式
             String token = UUID.randomUUID().toString();
             user.setToken(token);
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setAvatarUrl(githubUser.getAvatar_url());
             userService.createOrUpdate(user);
-            response.addCookie(new Cookie("token",token));
+            Cookie cookie = new Cookie("token", token);
+            //cookie最长生存时间，单位为s
+            cookie.setMaxAge(60 * 60 * 24 * 30 * 6);
+            response.addCookie(cookie);
             //cookie和session
             return "redirect:/";
             //登录成功

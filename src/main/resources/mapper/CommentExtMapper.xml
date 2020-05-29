@@ -24,4 +24,10 @@
     COMMENT_COUNT = COMMENT_COUNT+ #{commentCount,jdbcType=INTEGER}
     where id=#{id}
     </update>
+
+    <select id="selectComment" parameterType="com.zqk.community.model.Comment" resultType="java.lang.Long">
+    select ID
+    from COMMENT
+    where PARENT_ID=#{id} and TYPE = 1
+    </select>
 </mapper>

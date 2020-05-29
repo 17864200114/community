@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>登录-NGH玩家社区</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="/js/jquery-3.4.1.min.js"></script>
     <script src="/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="/js/community.js" type="application/javascript"></script>
 </head>
 <body>
-<div class="bg-img">
-    <img src="/images/loginbg.jpg">
+<!-- End Backgrounds -->
+
+<div class="container" id="login">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="login">
+
+                <h1><a href="/">NGH玩家社区</a></h1>
+
+                <!-- Loging form -->
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name" placeholder="Name">
+
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                    </div>
+
+                    <br>
+                    <button type="submit" class="btn btn-lg btn-block btn-success">登录</button>
+                </form>
+                <div>
+                    <a href="/register">
+                        没有账号，立即注册
+                    </a>
+                </div>
+
+                <div>
+                    <li>
+                        <a href="https://github.com/login/oauth/authorize?client_id=ec1a0ed793994e0dd6e2&redirect_uri=http://localhost:8080/callback&scope=user&state=1">github登录</a>
+                    </li>
+                </div>
+                <div class="alert alert-danger col-lg-4 col-md-12 col-sm-12 col-xs-12 col-lg-offset-4"
+                     th:text="${error}" th:if="${error!=null}" ></div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

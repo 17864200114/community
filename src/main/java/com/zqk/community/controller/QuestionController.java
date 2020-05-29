@@ -35,4 +35,9 @@ public class QuestionController {
         return "question";
     }
 
+    @GetMapping("/deletequestion/{id}")
+    public String deleteQuestion(@PathVariable(name = "id") Long id){
+        questionService.delete(id);
+        return "redirect:/profile/questions";
+    }
 }
