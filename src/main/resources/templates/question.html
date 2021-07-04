@@ -75,11 +75,22 @@
                                 <div th:text="${comment.content}"></div>
                                 <div class="menu">
 <!--                                    点赞-->
-                                    <span th:data-id="${comment.id}"
+                                    <input type="hidden" id="user_id" th:value="${session.user.id}" th:if="${session.user != null}">
+                                    <span  th:if="${comment.likeOrNotLike != 1}" th:data-id="${comment.id}"
+                                           th:likeType="${comment.likeOrNotLike}"
+
                                           onclick="likeComment(this)">
                                         <span class="glyphicon glyphicon-thumbs-up icon"></span>
                                         <span th:text="${comment.likeCount}" style="font-size: 16px"></span>
                                     </span>
+                                    <span  th:if="${comment.likeOrNotLike == 1}" th:data-id="${comment.id}"
+                                           th:likeType="${comment.likeOrNotLike}"
+
+                                          onclick="likeComment(this)">
+                                        <span class="glyphicon glyphicon-thumbs-up icon" style="color:#499ef3 "></span>
+                                        <span th:text="${comment.likeCount}" style="font-size: 16px"></span>
+                                    </span>
+
 <!--                                    评论-->
                                     <span th:data-id="${comment.id}"
                                           onclick="collapseComments(this)">

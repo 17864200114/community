@@ -62,7 +62,8 @@ public class QuestionService {
         paginationDTO.setPagination(totalPage,page);
         //size*(page-1)
         Integer offset = size* (page - 1);
-
+        if(offset<0)
+            offset=0;
         questionQueryDTO.setSize(size);
         questionQueryDTO.setPage(offset);
         List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
@@ -104,6 +105,8 @@ public class QuestionService {
 
         //size*(page-1)
         Integer offset = size* (page - 1);
+        if(offset<0)
+            offset=0;
         QuestionExample example = new QuestionExample();
         example.createCriteria().andCreatorEqualTo(userId);
         List<Question> questions = questionMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));

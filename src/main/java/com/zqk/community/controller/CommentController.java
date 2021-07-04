@@ -2,6 +2,7 @@ package com.zqk.community.controller;
 
 import com.zqk.community.dto.CommentCreateDTO;
 import com.zqk.community.dto.CommentDTO;
+import com.zqk.community.dto.LikeCreateDTO;
 import com.zqk.community.dto.ResultDTO;
 import com.zqk.community.enums.CommentTypeEnum;
 import com.zqk.community.exception.CustomizeErrorCode;
@@ -54,7 +55,15 @@ public class CommentController {
     @ResponseBody
     @RequestMapping(value = "/comment/{id}",method = RequestMethod.GET )
     public ResultDTO<List<CommentDTO>> comments(@PathVariable(name="id") Long id){
-        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
+        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT, 0);
         return ResultDTO.okOf(commentDTOS);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/commentLike",method = RequestMethod.POST)
+    public Object likeType(@RequestBody LikeCreateDTO likeCreateDTO,
+                       HttpServletRequest request){
+        commentService.likeOrNotLike(likeCreateDTO.getLikerId(),likeCreateDTO.getCommentId(),likeCreateDTO.getType());
+        return ResultDTO.okOf();
     }
 }

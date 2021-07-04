@@ -30,4 +30,18 @@
     from COMMENT
     where PARENT_ID=#{id} and TYPE = 1
     </select>
+
+    <update id="incCommentLikeCount" parameterType="com.zqk.community.model.Comment">
+    update COMMENT
+    set
+    LIKE_COUNT = LIKE_COUNT+ 1
+    where id=#{id}
+    </update>
+
+    <update id="decCommentLikeCount" parameterType="com.zqk.community.model.Comment">
+    update COMMENT
+    set
+    LIKE_COUNT = LIKE_COUNT- 1
+    where id=#{id}
+    </update>
 </mapper>

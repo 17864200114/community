@@ -1,14 +1,65 @@
-//提交回复
+function likeComment(e) {
+    //获得点赞人id（当前用户）
+    var likerId = $("#user_id").val();
+    console.log(likerId);
+    if(likerId==null){
+        var isAccepted = confirm("请您登录后再进行次操作。");
+        if(isAccepted){
+            debugger;
+            var questionId = $("#question_id").val();
+            window.localStorage.setItem("question_id",questionId);
+            window.location.href="http://localhost:8080/login";
+        }
+        return;
+    }
+
+    //点赞表：点赞人id，被点赞comment id，操作（点赞或取消点赞）
+    //获得commentid（被点赞comment的id）
+    var commentId = e.getAttribute("data-id");
+    console.log(commentId);
+
+    var likeType = e.getAttribute("likeType");
+    $.ajax({
+        type:"POST",
+        url:"/commentLike",
+        contentType:'application/json',
+        data:JSON.stringify({
+            "commentId":commentId,
+            "likerId":likerId,
+            "type":likeType
+        }),
+        success: function (response) {
+            if(response.code == 200){
+                location.reload();
+            }else {
+                    alert(response.message);
+            }
+            console.log(response);
+        },
+        dataType:"json"
+    });
+}
+
+//对主题提交回复
 function post() {
     var questionId = $("#question_id").val();
     var content = $("#comment_content").val();
     comment2target(questionId,1,content);
 }
 
+
+//对一级评论进行评论
+function comment(e) {
+    var commentId = e.getAttribute("data-id");
+    var content = $("#input-"+commentId).val();
+    comment2target(commentId,2,content);
+}
+
 function comment2target(targetId,type,content) {
     if(!content){
         alert("您的回复内容为空")
     }
+    //通过method = RequestMethod.POST向Controller发送评论信息
     $.ajax({
         type:"POST",
         url:"/comment",
@@ -26,8 +77,9 @@ function comment2target(targetId,type,content) {
                     var isAccepted = confirm(response.message);
                     if(isAccepted){
                         debugger;
+                        var questionId = $("#question_id").val();
                         window.localStorage.setItem("question_id",questionId);
-                        window.location.href="https://github.com/login/oauth/authorize?client_id=ec1a0ed793994e0dd6e2&redirect_uri=http://localhost:8080/callback&scope=user&state=1";
+                        window.location.href="http://localhost:8080/login";
                     }
                 }else{
                     alert(response.message);
@@ -40,12 +92,8 @@ function comment2target(targetId,type,content) {
 
 }
 
-function comment(e) {
-    var commentId = e.getAttribute("data-id");
-    var content = $("#input-"+commentId).val();
-    comment2target(commentId,2,content);
-}
-//二级评论
+
+//二级评论(展开或折叠）
 function collapseComments(e) {
     var id = e.getAttribute("data-id");
     var comments = $("#comment-" + id);
@@ -65,6 +113,7 @@ function collapseComments(e) {
             e.setAttribute("data-collapse", 'in');
             e.classList.add("icon-color-active");
         }else {
+            //通过method = RequestMethod.GET获得二级评论
             $.getJSON("/comment/" + id, function (data) {
                 $.each(data.data.reverse(), function (index, comment) {
 
@@ -111,9 +160,7 @@ function collapseComments(e) {
     }
 }
 
-function likeComment(e) {
-    var id = e.getAttribute("data-id");
-}
+
 
 
 

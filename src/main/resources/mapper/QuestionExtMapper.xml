@@ -34,7 +34,7 @@
           resultType="java.lang.Integer">
     select count(*) from QUESTION
     <where>
-      <if test="search != null">
+      <if test="search != null and search != ''">
             and title regexp #{search}
       </if>
     </where>
@@ -48,7 +48,7 @@
           title regexp #{search}
       </if>
     </where>
-    order by gmt_create desc limit #{page},#{size}
+    order by gmt_modified desc limit #{page},#{size}
   </select>
 
 </mapper>

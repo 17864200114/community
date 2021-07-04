@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="unnamed" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3731512a-6d9f-4ce7-b72e-f122caa92fff" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/community.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/AuthorizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/AuthorizeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/dto/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/dto/CommentDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/CommentExtMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/CommentExtMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/CommentMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/NotificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/NotificationMapper.java" afterDir="false" />
@@ -19,22 +27,31 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/QuestionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/QuestionExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/UserExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/UserExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V10__Create_notifization_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V5__Create_notifization_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V11__change_notification.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V12__Add_password_to_user_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_user_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_user_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_bio_col_to_user_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Create_question_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_question_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V4__Add_avatar_url_to_user_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V5__Create_comment_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Create_comment_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V7__Change_id_column_type.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V8__Change_creator_column_type.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V9__Add_comment_count_to_comment_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentExtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentExtMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NotificationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NotificationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/QuestionExtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/QuestionExtMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/community.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/loginbg.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/community.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,51 +72,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="community" type="feb32156:DbDataSourceImpl" />
+        <item name="community@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="community" type="feb32156:DbDataSourceImpl" />
-        <item name="COMMUNITY: database" type="2aa06773:H2ImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="community" type="feb32156:DbDataSourceImpl" />
-        <item name="COMMUNITY: database" type="2aa06773:H2ImplModel$Database" />
+        <item name="community@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="community" type="feb32156:DbDataSourceImpl" />
-        <item name="COMMUNITY: database" type="2aa06773:H2ImplModel$Database" />
+        <item name="community@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
+        <item name="community: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="community" type="feb32156:DbDataSourceImpl" />
-        <item name="COMMUNITY: database" type="2aa06773:H2ImplModel$Database" />
+        <item name="community@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="community" type="feb32156:DbDataSourceImpl" />
-        <item name="COMMUNITY: database" type="2aa06773:H2ImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="COMMENT: table" type="818c1b4a:H2ImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="community" type="feb32156:DbDataSourceImpl" />
-        <item name="COMMUNITY: database" type="2aa06773:H2ImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="QUESTION: table" type="818c1b4a:H2ImplModel$Table" />
+        <item name="community: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -110,8 +101,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -137,7 +128,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="h2" />
+    <property name="DatabaseDriversLRU" value="h2&#10;mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -148,31 +139,31 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/db/migration" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="settings.editor.selected.configurable" value="xml.defaultSchemas" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.zqk.community.service" />
-      <recent name="com.zqk.community.interceptor" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zqk\Desktop\community\src\main\resources\templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zqk\Desktop\community\src\main\resources\db\migration" />
       <recent name="C:\Users\zqk\Desktop\community\src\main\resources\static\images" />
       <recent name="C:\Users\zqk\Desktop\community\src\main\resources\templates" />
       <recent name="C:\Users\zqk\Desktop\community\src\main\resources\static\css" />
       <recent name="C:\Users\zqk\Desktop\community\src\main\resources\static\js" />
-      <recent name="C:\Users\zqk\Desktop\community\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.zqk.community.mapper" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\zqk\Desktop\community\src\main\resources\templates" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zqk.community.service" />
+      <recent name="com.zqk.community.interceptor" />
     </key>
   </component>
   <component name="RunManager">
@@ -299,7 +290,40 @@
       <workItem from="1590637294149" duration="9830000" />
       <workItem from="1590653503116" duration="8825000" />
       <workItem from="1590667025002" duration="4122000" />
-      <workItem from="1590714829499" duration="9598000" />
+      <workItem from="1590714829499" duration="14184000" />
+      <workItem from="1590760745437" duration="834000" />
+      <workItem from="1590761596361" duration="2701000" />
+      <workItem from="1590800015283" duration="15377000" />
+      <workItem from="1590822683740" duration="5465000" />
+      <workItem from="1590828450984" duration="7288000" />
+      <workItem from="1590842235738" duration="666000" />
+      <workItem from="1590842920192" duration="6753000" />
+      <workItem from="1590887564570" duration="5422000" />
+      <workItem from="1590927342204" duration="7000" />
+      <workItem from="1590934825532" duration="472000" />
+      <workItem from="1590978182690" duration="1764000" />
+      <workItem from="1591076236069" duration="599000" />
+      <workItem from="1591078179419" duration="5850000" />
+      <workItem from="1591147016217" duration="3342000" />
+      <workItem from="1591163331016" duration="3000" />
+      <workItem from="1591261526119" duration="608000" />
+      <workItem from="1591411043247" duration="3000" />
+      <workItem from="1591412822501" duration="617000" />
+      <workItem from="1591446575912" duration="22000" />
+      <workItem from="1591686321405" duration="4000" />
+      <workItem from="1592052142627" duration="597000" />
+      <workItem from="1616391269512" duration="2750000" />
+      <workItem from="1622343786227" duration="1598000" />
+      <workItem from="1622516474537" duration="3889000" />
+      <workItem from="1622598662810" duration="14000" />
+      <workItem from="1622606088328" duration="12000" />
+      <workItem from="1622606284524" duration="332000" />
+      <workItem from="1622624683249" duration="1653000" />
+      <workItem from="1622627704993" duration="134000" />
+      <workItem from="1622628789069" duration="218000" />
+      <workItem from="1622713735426" duration="2049000" />
+      <workItem from="1624786274224" duration="31000" />
+      <workItem from="1625282182972" duration="19000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1586507589193</created>
@@ -339,206 +363,62 @@
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="273" y="0" key="#Notifications" timestamp="1587538006227">
+    <state x="233" y="0" key="#Project_Structure" timestamp="1622516546820">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="273" y="0" key="#Notifications/0.0.1280.683@0.0.1280.683" timestamp="1587538006227" />
-    <state x="233" y="0" key="#Project_Structure" timestamp="1587781729561">
+    <state x="233" y="0" key="#Project_Structure/0.0.1280.683@0.0.1280.683" timestamp="1622516546820" />
+    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622343895083">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="233" y="0" key="#Project_Structure/0.0.1280.683@0.0.1280.683" timestamp="1587781729561" />
-    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590637034572">
+    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1622343895083" />
+    <state x="317" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622723160138">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.683@0.0.1280.683" timestamp="1590637034572" />
-    <state x="367" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590135450960">
+    <state x="317" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.683@0.0.1280.683" timestamp="1622723160138" />
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1622723160621">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="367" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.683@0.0.1280.683" timestamp="1590135450960" />
-    <state x="446" y="25" key="#com.intellij.ide.util.MemberChooser" timestamp="1589608580094">
+    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1622723160621" />
+    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1622723160621">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="446" y="25" key="#com.intellij.ide.util.MemberChooser/0.0.1280.683@0.0.1280.683" timestamp="1589608580094" />
-    <state x="372" y="115" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1589786721033">
+    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1622723160621" />
+    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1622723160621">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="372" y="115" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1280.683@0.0.1280.683" timestamp="1589786721033" />
-    <state x="327" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1587636335016">
+    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1622723160621" />
+    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1622723160621">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="327" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.683@0.0.1280.683" timestamp="1587636335016" />
-    <state x="425" y="199" width="432" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1590737829722">
+    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1622723160621" />
+    <state width="1237" height="2" key="GridCell.Tab.1.bottom" timestamp="1622723160622">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="425" y="199" width="432" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.683@0.0.1280.683" timestamp="1590737829722" />
-    <state x="373" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589608219939">
+    <state width="1237" height="2" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1622723160622" />
+    <state width="1237" height="2" key="GridCell.Tab.1.center" timestamp="1622723160621">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="373" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.683@0.0.1280.683" timestamp="1589608219939" />
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590629318074">
+    <state width="1237" height="2" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1622723160621" />
+    <state width="1237" height="2" key="GridCell.Tab.1.left" timestamp="1622723160621">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.683@0.0.1280.683" timestamp="1590629318074" />
-    <state x="385" y="186" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590635727590">
+    <state width="1237" height="2" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1622723160621" />
+    <state width="1237" height="2" key="GridCell.Tab.1.right" timestamp="1622723160622">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="385" y="186" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.683@0.0.1280.683" timestamp="1590635727590" />
-    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1588172987239">
+    <state width="1237" height="2" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1622723160622" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1622518339969">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="250" y="0" key="CommitChangelistDialog2/0.0.1280.683@0.0.1280.683" timestamp="1588172987239" />
-    <state x="121" y="50" key="DiffContextDialog" timestamp="1588042594369">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1622518339969" />
+    <state x="325" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1625282183162">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="121" y="50" key="DiffContextDialog/0.0.1280.683@0.0.1280.683" timestamp="1588042594369" />
-    <state x="397" y="80" key="FileChooserDialogImpl" timestamp="1587781604921">
+    <state x="325" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1625282183162" />
+    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1622518382876">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="397" y="80" key="FileChooserDialogImpl/0.0.1280.683@0.0.1280.683" timestamp="1587781604921" />
-    <state width="1237" height="42" key="GridCell.Tab.0.bottom" timestamp="1590738053194">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="42" key="GridCell.Tab.0.bottom/0.0.1280.683@0.0.1280.683" timestamp="1590738053194" />
-    <state width="1237" height="42" key="GridCell.Tab.0.center" timestamp="1590738053194">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="42" key="GridCell.Tab.0.center/0.0.1280.683@0.0.1280.683" timestamp="1590738053194" />
-    <state width="1237" height="42" key="GridCell.Tab.0.left" timestamp="1590738053193">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="42" key="GridCell.Tab.0.left/0.0.1280.683@0.0.1280.683" timestamp="1590738053193" />
-    <state width="1237" height="42" key="GridCell.Tab.0.right" timestamp="1590738053194">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="42" key="GridCell.Tab.0.right/0.0.1280.683@0.0.1280.683" timestamp="1590738053194" />
-    <state width="1237" height="42" key="GridCell.Tab.1.bottom" timestamp="1590738053194">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="42" key="GridCell.Tab.1.bottom/0.0.1280.683@0.0.1280.683" timestamp="1590738053194" />
-    <state width="1237" height="42" key="GridCell.Tab.1.center" timestamp="1590738053194">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="42" key="GridCell.Tab.1.center/0.0.1280.683@0.0.1280.683" timestamp="1590738053194" />
-    <state width="1237" height="42" key="GridCell.Tab.1.left" timestamp="1590738053194">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="42" key="GridCell.Tab.1.left/0.0.1280.683@0.0.1280.683" timestamp="1590738053194" />
-    <state width="1237" height="42" key="GridCell.Tab.1.right" timestamp="1590738053194">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="42" key="GridCell.Tab.1.right/0.0.1280.683@0.0.1280.683" timestamp="1590738053194" />
-    <state width="1237" height="18" key="GridCell.Tab.2.bottom" timestamp="1590735852969">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="18" key="GridCell.Tab.2.bottom/0.0.1280.683@0.0.1280.683" timestamp="1590735852969" />
-    <state width="1237" height="18" key="GridCell.Tab.2.center" timestamp="1590735852969">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="18" key="GridCell.Tab.2.center/0.0.1280.683@0.0.1280.683" timestamp="1590735852969" />
-    <state width="1237" height="18" key="GridCell.Tab.2.left" timestamp="1590735852969">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="18" key="GridCell.Tab.2.left/0.0.1280.683@0.0.1280.683" timestamp="1590735852969" />
-    <state width="1237" height="18" key="GridCell.Tab.2.right" timestamp="1590735852969">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="1237" height="18" key="GridCell.Tab.2.right/0.0.1280.683@0.0.1280.683" timestamp="1590735852969" />
-    <state width="238" height="477" key="HiddenNamespacesPopup" timestamp="1587196136482">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="238" height="477" key="HiddenNamespacesPopup/0.0.1280.683@0.0.1280.683" timestamp="1587196136482" />
-    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1586701619368">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.683@0.0.1280.683" timestamp="1586701619368" />
-    <state x="188" y="6" key="Registry" timestamp="1587285169812">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="188" y="6" key="Registry/0.0.1280.683@0.0.1280.683" timestamp="1587285169812" />
-    <state x="428" y="51" key="RollbackChangesDialog" timestamp="1589787378337">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="428" y="51" key="RollbackChangesDialog/0.0.1280.683@0.0.1280.683" timestamp="1589787378337" />
-    <state x="113" y="0" key="SettingsEditor" timestamp="1588998293966">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="113" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1588998293966" />
-    <state x="362" y="71" width="576" height="524" key="StructurePopup" timestamp="1588950089951">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="362" y="71" width="576" height="524" key="StructurePopup/0.0.1280.683@0.0.1280.683" timestamp="1588950089951" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1588653066725">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1280.683@0.0.1280.683" timestamp="1588653066725" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1586507652293">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.683@0.0.1280.683" timestamp="1586507652293" />
-    <state width="647" height="348" key="XDebugger.FullValuePopup" timestamp="1587563471432">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state width="647" height="348" key="XDebugger.FullValuePopup/0.0.1280.683@0.0.1280.683" timestamp="1587563471432" />
-    <state x="533" y="230" width="338" height="238" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1589559366196">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="533" y="230" width="338" height="238" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1280.683@0.0.1280.683" timestamp="1589559366196" />
-    <state x="221" y="0" key="com.intellij.database.dbimport.ImportDialog" timestamp="1586842729684">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="221" y="0" key="com.intellij.database.dbimport.ImportDialog/0.0.1280.683@0.0.1280.683" timestamp="1586842729684" />
-    <state x="425" y="164" width="431" height="351" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1586842032984">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="425" y="164" width="431" height="351" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1280.683@0.0.1280.683" timestamp="1586842032984" />
-    <state x="391" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1590565885369">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="391" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.683@0.0.1280.683" timestamp="1590565885369" />
-    <state x="501" y="87" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1587196301056">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="501" y="87" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1280.683@0.0.1280.683" timestamp="1587196301056" />
-    <state x="265" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1590714895864">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="265" y="220" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1590714895864" />
-    <state x="268" y="58" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1588235469667">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="268" y="58" key="com.intellij.javaee.MapExternalResourceDialog/0.0.1280.683@0.0.1280.683" timestamp="1588235469667" />
-    <state x="433" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589801430719">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="433" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.683@0.0.1280.683" timestamp="1589801430719" />
-    <state x="437" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589787474141">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="437" y="258" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.683@0.0.1280.683" timestamp="1589787474141" />
-    <state x="403" y="59" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586614473534">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="403" y="59" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.683@0.0.1280.683" timestamp="1586614473534" />
-    <state x="93" y="93" width="1095" height="497" key="dock-window-1" timestamp="1589608527298">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="93" y="93" width="1095" height="497" key="dock-window-1/0.0.1280.683@0.0.1280.683" timestamp="1589608527298" />
-    <state x="371" y="94" key="extract.method.dialog" timestamp="1589608779546">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="371" y="94" key="extract.method.dialog/0.0.1280.683@0.0.1280.683" timestamp="1589608779546" />
-    <state x="151" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1589792802304">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="151" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.683@0.0.1280.683" timestamp="1589792802304" />
-    <state x="297" y="145" key="run.anything.popup" timestamp="1589806693095">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="297" y="145" key="run.anything.popup/0.0.1280.683@0.0.1280.683" timestamp="1589806693095" />
-    <state x="577" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1590736543453">
-      <screen x="0" y="0" width="1280" height="683" />
-    </state>
-    <state x="577" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1590736543453" />
+    <state x="303" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.683@0.0.1280.683" timestamp="1622518382876" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
