@@ -8,50 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3731512a-6d9f-4ce7-b72e-f122caa92fff" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community.iml" beforeDir="false" afterPath="$PROJECT_DIR$/community.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/AuthorizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/AuthorizeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/dto/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/dto/CommentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/CommentExtMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/CommentExtMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/CommentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/NotificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/NotificationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/QuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/QuestionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/CommentExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/CommentExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/NotificationExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/NotificationExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/QuestionExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/QuestionExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/UserExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/model/UserExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zqk/community/service/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V10__Create_notifization_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V5__Create_notifization_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V11__change_notification.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V12__Add_password_to_user_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_user_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_user_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_bio_col_to_user_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Create_question_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Create_question_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V4__Add_avatar_url_to_user_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V5__Create_comment_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Create_comment_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V7__Change_id_column_type.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V8__Change_creator_column_type.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V9__Add_comment_count_to_comment_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentExtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentExtMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NotificationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NotificationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/QuestionExtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/QuestionExtMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/community.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/community.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/navigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,6 +280,8 @@
       <workItem from="1622713735426" duration="2049000" />
       <workItem from="1624786274224" duration="31000" />
       <workItem from="1625282182972" duration="19000" />
+      <workItem from="1625414620131" duration="360000" />
+      <workItem from="1625455638934" duration="923000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1586507589193</created>
@@ -411,10 +369,10 @@
       <screen x="0" y="0" width="1280" height="683" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.683@0.0.1280.683" timestamp="1622518339969" />
-    <state x="325" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1625282183162">
+    <state x="325" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1625455644111">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
-    <state x="325" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1625282183162" />
+    <state x="325" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.683@0.0.1280.683" timestamp="1625455644111" />
     <state x="303" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1622518382876">
       <screen x="0" y="0" width="1280" height="683" />
     </state>
